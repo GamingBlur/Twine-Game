@@ -9,27 +9,47 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play prison.</tw-noscript></noscript></tw-story>
-<tw-storydata name="prison" startnode="1" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="9882E839-BFD8-4FDA-93F5-356FF1FF9AC9" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="1075,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/1.JPG&quot;&gt;
+<tw-storydata name="prison" startnode="1" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="9882E839-BFD8-4FDA-93F5-356FF1FF9AC9" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="1075,500" size="100,100">{
+(set: $one to false)
+(set: $two to false)
+(set: $three to false)
+}
+
+&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/1.JPG&quot;&gt;
 
 [[wake up.-&gt;wakeup]]</tw-passagedata><tw-passagedata pid="2" name="wakeup" tags="" position="1200,525" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/GIF1.gif&quot;&gt;
 
-you awake in your cell. [[stay-&gt;stay]] or [[go-&gt;go]]?</tw-passagedata><tw-passagedata pid="3" name="stay" tags="" position="1225,750" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/2.JPG&quot;&gt;
+you awake in your cell. [[stay-&gt;stay]] or [[go-&gt;go]]?
+
+{
+(set: $event to (random: 1,3))
+}</tw-passagedata><tw-passagedata pid="3" name="stay" tags="" position="1225,750" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/2.JPG&quot;&gt;
 
 it&#39;s not worth it.
 
-[[wake up.-&gt;wakeup]]</tw-passagedata><tw-passagedata pid="4" name="go" tags="" position="1350,525" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/GIF2.gif&quot;&gt;
+[[wake up.-&gt;wakeup]]
+
+{
+(set: $one to true)
+}</tw-passagedata><tw-passagedata pid="4" name="go" tags="" position="1350,525" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/GIF2.gif&quot;&gt;
 
 [[it&#39;s raining outside.-&gt;towork]]</tw-passagedata><tw-passagedata pid="5" name="towork" tags="" position="1525,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/3.jpg&quot;&gt;
 
-(description 1)
+the only thing worse than never knowing the warmth of another is to have once known of it.
+
+that belief is a core tenet of your philosophy. your agony informs it, shapes it. there&#39;s a certain and endless vitriol to it that you&#39;re able to supply at the cost of your energy and your being. perhaps, if you were willing to let go of this, you could find it in you to face forward when you walk. to smile at another. to raise a hand in greeting. you could even open your mouth and speak your mind.
+
+but you are addicted to this bitterness. it has a vice grip on you.
+
+thus, it all seems impossible.
+
+thus, none of it will happen.
 
 [[go to work.-&gt;work1]]</tw-passagedata><tw-passagedata pid="6" name="work1" tags="" position="1700,525" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/4.JPG&quot;&gt;
 
-[[work.-&gt;work21]]
-
-[[work.-&gt;work22]]
-
-[[work.-&gt;work23]]</tw-passagedata><tw-passagedata pid="7" name="work21" tags="" position="1875,350" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/5.jpg&quot;&gt;
+(if: $event is 1)[[[work.-&gt;work21]]]
+(elseif: $event is 2)[[[work.-&gt;work22]]]
+(elseif: $event is 3)[[[work.-&gt;work23]]]</tw-passagedata><tw-passagedata pid="7" name="work21" tags="" position="1875,350" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/5.jpg&quot;&gt;
 
 [[work.-&gt;work3]]</tw-passagedata><tw-passagedata pid="8" name="work22" tags="" position="1875,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/6.jpeg&quot;&gt;
 
@@ -37,7 +57,17 @@ it&#39;s not worth it.
 
 [[work.-&gt;work3]]</tw-passagedata><tw-passagedata pid="10" name="work3" tags="" position="2050,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/8.jpg&quot;&gt;
 
-(description 2)
+there&#39;s tethers, even when you don&#39;t want there to be.
+
+a customer will look like a friend. you say nothing. a coworker will share a hobby with one of your cousins. you say nothing. an expiration date will be the same as an anniversary.
+
+you notice, and you obsess. you say nothing.
+
+you don&#39;t know this, but none of this is your fault. it feels like it is, because it is you who doesn&#39;t make the effort to reach out. but it&#39;s simply because you can&#39;t. you&#39;re so consumed, so desperate, the horseshoe theory comes into effect. something about the overwhelming agony of it all makes any step forward insurmountable.
+
+you dream of strength. of support. of anything more than this. but there&#39;s nothing. not yet. maybe not ever.
+
+maybe you&#39;re a lost cause.
 
 [[work.-&gt;question]]</tw-passagedata><tw-passagedata pid="11" name="question" tags="" position="2225,500" size="100,100">i have an honest question for you. may i ask it?
 
@@ -45,27 +75,50 @@ it&#39;s not worth it.
 
 [[no.-&gt;no]]</tw-passagedata><tw-passagedata pid="12" name="yes" tags="" position="2225,625" size="100,100">when was the last time you talked to someone?
 
-[[wake up.-&gt;wakeup]]</tw-passagedata><tw-passagedata pid="13" name="no" tags="" position="2400,500" size="100,100">[[fine.-&gt;fromwork]]</tw-passagedata><tw-passagedata pid="14" name="fromwork" tags="" position="2550,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/9.jpg&quot;&gt;
+[[wake up.-&gt;wakeup]]
+
+{
+(set: $two to true)
+}</tw-passagedata><tw-passagedata pid="13" name="no" tags="" position="2400,500" size="100,100">[[fine.-&gt;fromwork]]</tw-passagedata><tw-passagedata pid="14" name="fromwork" tags="" position="2550,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/9.jpg&quot;&gt;
 
 work&#39;s done.
 
-(description 3)
+the weather&#39;s fascinating, in a way. the season of spring calls for brighter and longer days, yet the climate can&#39;t seem to help itself from pouring rain. there is sun peeking through the clouds, yet said clouds have forced streetlights to turn on, and the rain only grows heavier as the brightness of the sun is somehow maintained.
+
+you figure there&#39;s probably a metaphor in this. the mandate of sunlight, the need to keep up appearances or what&#39;s expected of oneself, while the rain simply cannot help itself.
+
+while the misery only grows.
 
 [[something catches your eye.-&gt;misery]]</tw-passagedata><tw-passagedata pid="15" name="misery" tags="" position="2700,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/10.JPG&quot;&gt;
 
-(description 4)
+you can&#39;t help but feel it&#39;s mocking you.
 
-[[until... (audio incoming)-&gt;call]]</tw-passagedata><tw-passagedata pid="16" name="call" tags="" position="2850,500" size="100,100">you get a call. from him.
+you need help, and it knows you need help. if this sign, this phone, this whole pole were a person, you imagine it sneering yet condescendingly soft. smugly smirking yet earnestly treating you as if you were made of glass. looking down on you in every sense of the word.
+
+you hate yourself for assuming the worst like this. for thinking that even the inanimate is out to get you. this is why you are forever lonely. eternally miserable. you&#39;re not only undeserving of peace, of satisfaction, of happiness.
+
+you are simply not capable.
+
+[[until...-&gt;call]]
+(audio incoming)</tw-passagedata><tw-passagedata pid="16" name="call" tags="" position="2850,500" size="100,100">you get a call. from him.
 
 do you answer?
 
-[[i do.-&gt;do]] (make not available until other two endings.)
+{
+(if: $one is true) + (if: $two is true) + (if: $three is true)[[[i do.-&gt;do]]]
+}
 
-[[i don&#39;t.-&gt;don&#39;t]]</tw-passagedata><tw-passagedata pid="17" name="do" tags="" position="3025,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/GIF3.gif&quot;&gt;
+[[i don&#39;t.-&gt;don&#39;t]]
 
-&quot;hey. it&#39;s been a while. just wanted to check in. how are you holding up?&quot; (kacey color maybe?)</tw-passagedata><tw-passagedata pid="18" name="don&#39;t" tags="" position="2850,650" size="100,100">scum.
+&lt;audio src=&quot;https://GamingBlur.github.io/twinegame/images/ringtone.mp3&quot;autoplay&gt;</tw-passagedata><tw-passagedata pid="17" name="do" tags="" position="3025,500" size="100,100">&lt;img src=&quot;https://GamingBlur.github.io/twinegame/images/GIF3.gif&quot;&gt;
 
-[[wake up.-&gt;wakeup]]</tw-passagedata></tw-storydata>
+(text-color: #2e70ff)[&quot;hey. it&#39;s been a while. just wanted to check in. how are you holding up?&quot;]</tw-passagedata><tw-passagedata pid="18" name="don&#39;t" tags="" position="2850,650" size="100,100">scum.
+
+[[wake up.-&gt;wakeup]]
+
+{
+(set: $three to true)
+}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
